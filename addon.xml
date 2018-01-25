@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.oops.test" name="Oops Test" version="1.0.1" provider-name="gotag">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py" debugging="true">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Simple AddOn to show the fatal problems the edit control causes in a private WindowXMLDialog</summary>
+		<description lang="en">Simple AddOn based on script.hello.world to show the fatal problems the edit control causes in a private WindowXMLDialog. No problems are encountered when running this AddOn in Kodi installed on a Win10 PC. However, running this AddOn on a LibreElec Intel Nuc machine will result in a automatic restart of Kodi. This happens as soon as the label of a edit control is set via a python script as is the case in this AddOn. Setting and modifying the text of a edit control is possible. However, as soon as the Dialog with the edit control is deleted (implicitely as soon as the variable that holds the Dialog object gets out of scoop or explicity by using del in the python script, or by setting the variable that holds the WindowXMLDialog object to None). As long as the label and the text of a edit control is not set, everything looks ok. Use the buttons to experiment with the different combinations. 
+		</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<forum>http://forum.kodi.tv/showthread.php?tid=209948</forum>
+		<website>Kodi.tv</website>
+		<email>zag@kodi.org</email>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>Updated the addon to use new addon.xml metadata</news>
+	</extension>
+</addon>
