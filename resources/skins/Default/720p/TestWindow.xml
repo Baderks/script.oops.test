@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <visible>String.IsEqual(Window.Property(ShowTestWindow), true)</visible>
+    <!-- 1280 x 720 -->
+    <defaultcontrol>1090</defaultcontrol>
+    <controls>                        
+        <control type="group">
+            <!-- Background -->
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1280" />
+				<param name="height" value="720" />
+				<param name="header_label" value="$LOCALIZE[13406]" />
+				<param name="header_id" value="1000" />
+			</include>
+
+            <control type="grouplist" id="1010">
+                <left>40</left>
+                <top>80</top>
+                <width>1200</width>
+                <height>640</height>
+                <visible>String.IsEqual(Window.Property(ShowTestWindow), true)</visible>
+                
+                <control type="label" id="1019">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>32</height>
+                    <font>font14</font>
+                    <textoffsetx>0</textoffsetx>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>$NUMBER[1280]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <haspath>false</haspath>
+                    <visible>true</visible>			
+                </control>
+                
+                <control type="label" id="1029">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>32</height>
+                    <font>font14</font>
+                    <textoffsetx>0</textoffsetx>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>$NUMBER[720]</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <haspath>false</haspath>
+                    <visible>true</visible>			
+                </control>
+                
+                <control type="label" id="1039">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>32</height>
+                    <font>font14</font>
+                    <textoffsetx>0</textoffsetx>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <label>Logfile</label>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <haspath>false</haspath>
+                    <visible>true</visible>			
+                </control>
+                    
+                 <!-- button line grouplist -->
+                 <control type="grouplist" id="1090">
+                     <!-- left>0</left -->
+                     <top>70r</top>
+                     <!-- width>1200</width -->
+                     <height>50</height>
+                     <itemgap>30</itemgap>
+                     <orientation>horizontal</orientation>
+                     <align>left</align>
+                     <defaultcontrol>1093</defaultcontrol>
+                     <onleft>1093</onleft>
+                     <onright>1091</onright>
+                     <onup>1080</onup>
+                     <ondown>1010</ondown>
+                
+                    <!-- stop button -->
+                    <control type="button" id="1091">
+                        <description>Stop Button</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <font>font14</font>
+                        <textcolor>FFB2D4F5</textcolor>
+                        <disabledcolor>66B2D4F5</disabledcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <invalidcolor>invalid</invalidcolor>
+                        <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                        <label>Stop</label>
+                        <onleft>1093</onleft>
+                        <onright>1092</onright>
+                    </control>
+                    <!-- skip init editbox button -->
+                    <control type="button" id="1092">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <font>font14</font>
+                        <textcolor>FFB2D4F5</textcolor>
+                        <disabledcolor>66B2D4F5</disabledcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <invalidcolor>invalid</invalidcolor>
+                        <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                        <label>Skip Init Editbox</label>
+                        <onleft>1091</onleft>
+                        <onright>1093</onright>
+                    </control>
+                    <!-- init edit label button -->
+                    <control type="button" id="1093">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <font>font14</font>
+                        <textcolor>FFB2D4F5</textcolor>
+                        <disabledcolor>66B2D4F5</disabledcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <invalidcolor>invalid</invalidcolor>
+                        <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                        <label>Init Editbox Label</label>
+                        <onleft>1092</onleft>
+                        <onright>1091</onright>
+                    </control>
+                    <!-- init edit text button -->
+                    <control type="button" id="1094">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <font>font14</font>
+                        <textcolor>FFB2D4F5</textcolor>
+                        <disabledcolor>66B2D4F5</disabledcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <invalidcolor>invalid</invalidcolor>
+                        <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                        <label>Init Editbox Text</label>
+                        <onleft>1092</onleft>
+                        <onright>1091</onright>
+                    </control>
+                    <!-- full init editbox button -->
+                    <control type="button" id="1095">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>200</width>
+                        <font>font14</font>
+                        <textcolor>FFB2D4F5</textcolor>
+                        <disabledcolor>66B2D4F5</disabledcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <invalidcolor>invalid</invalidcolor>
+                        <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                        <label>Init Editbox Full</label>
+                        <onleft>1092</onleft>
+                        <onright>1091</onright>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

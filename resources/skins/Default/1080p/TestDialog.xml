@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1010</defaultcontrol>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<!-- top>100</top -->
+			<width>1050</width>
+			<height>975</height>
+			<control type="grouplist" id="1000">
+				<description>control area</description>
+				<left>45</left>
+				<top>60</top>
+				<width>960</width>
+				<height>975</height>
+				<itemgap>0</itemgap>
+				<onup>1080</onup>
+				<ondown>1080</ondown>
+
+				<!-- full name header -->
+				<control type="label" id="1001">
+					<height>105</height>
+					<font>font14</font>
+					<label>Output mode</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFB2D4F5</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+				</control>
+				
+				<!-- name editor -->
+				<control type="group" id="1010">
+					<height>75</height>
+					<defaultcontrol>1001</defaultcontrol>
+					<onup>1080</onup>
+					<ondown>1020</ondown>
+					<!-- unfocussed backgroud -->
+					<control type="image" id="1011">
+						<height>50</height>
+						<colordiffuse>FF101314</colordiffuse>
+						<fadetime>0</fadetime>
+						<texture>Button/button-fo.png</texture>
+						<bordertexture />
+						<bordersize></bordersize>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<!-- name editor -->
+					<control type="edit" id="1012">
+						<description>ListItem Name Property</description>
+						<height>75</height>
+						<visible>true</visible>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>Name</label>
+						<hinttext></hinttext>
+						<font>font14</font>
+						<textwidth>621</textwidth>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>FFB2D4F5</textcolor>
+						<disabledcolor>88B2D4F5</disabledcolor>
+						<invalidcolor>44B2D4F5</invalidcolor>
+						<texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+						<texturenofocus />
+						<pulseonselect>no</pulseonselect>
+						<onup>1091</onup>
+						<ondown>1091</ondown>
+						<onunfocus>SendClick(1012)</onunfocus>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<left>45</left>
+				<top>105r</top>
+				<width>960</width>					
+				<height>50</height>
+				<onup>1010</onup>
+				<ondown>1010</ondown>
+
+				<!-- reset button -->
+				<control type="button" id="1090">
+					<description>Reset Button</description>
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<font>font14</font>
+					<textcolor>FFB2D4F5</textcolor>
+					<disabledcolor>66B2D4F5</disabledcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<invalidcolor>invalid</invalidcolor>
+					<texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+					<texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+					<enable>String.IsEqual(Window.Property(hasChanges), true)</enable>
+					<label>Reset</label>
+					<onleft>1094</onleft>
+					<onright>1092</onright>
+					<onup>1010</onup>
+					<ondown>1010</ondown>
+				</control>
+
+				<control type="grouplist" id="1091">
+					<left>0</left>
+					<top>0</top>
+					<width>640</width>					
+					<itemgap>30</itemgap>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<defaultcontrol>1053</defaultcontrol>
+					<onleft>1090</onleft>
+					<onright>1090</onright>
+					<onup>1010</onup>
+					<ondown>1010</ondown>
+					<!-- cancel button -->
+					<control type="button" id="1092">
+						<description>Cancel Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>200</width>
+						<font>font14</font>
+						<textcolor>FFB2D4F5</textcolor>
+						<disabledcolor>66B2D4F5</disabledcolor>
+						<shadowcolor>FF000000</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<invalidcolor>invalid</invalidcolor>
+						<texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+						<texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+						<label>Cancel</label>
+						<onleft>1090</onleft>
+						<onright>1093</onright>
+					</control>
+					<!-- replace button -->
+					<control type="button" id="1093">
+						<description>Replace Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>200</width>
+						<font>font14</font>
+						<textcolor>FFB2D4F5</textcolor>
+						<disabledcolor>66B2D4F5</disabledcolor>
+						<shadowcolor>FF000000</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<invalidcolor>invalid</invalidcolor>
+						<texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+						<texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+						<enable>String.IsEqual(Window.Property(hasChanges), true)</enable>
+						<label>Replace</label>
+						<onleft>1092</onleft>
+						<onright>1094</onright>
+					</control>
+					<!-- add/ok button -->
+					<control type="button" id="1094">
+						<description>Add Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>200</width>
+						<font>font14</font>
+						<textcolor>FFB2D4F5</textcolor>
+						<disabledcolor>66B2D4F5</disabledcolor>
+						<shadowcolor>FF000000</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<invalidcolor>invalid</invalidcolor>
+						<texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+						<texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+						<enable>String.IsEqual(Window.Property(hasChanges), true) | !Control.IsVisible(1093)</enable>
+						<label>Add</label>
+						<onleft>1093</onleft>
+						<onright>1090</onright>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

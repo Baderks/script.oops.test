@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- 1920 x 1080 -->
+    <defaultcontrol>1090</defaultcontrol>
+    <controls>                        
+
+        <control type="grouplist">
+            <left>60</left>
+            <top>80</top>
+            <width>1800</width>
+            <height>960</height>
+            
+            <control type="label" id="1000">
+                <left>0</left>
+                <height>48</height>
+                <font>font14</font>
+                <textoffsetx>0</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>title</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <haspath>false</haspath>
+                <visible>true</visible>			
+            </control>
+            
+            <control type="label" id="1019">
+                <left>0</left>
+                <height>48</height>
+                <font>font14</font>
+                <textoffsetx>0</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>$NUMBER[1920]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <haspath>false</haspath>
+                <visible>true</visible>			
+            </control>
+            
+            <control type="label" id="1029">
+                <left>0</left>
+                <height>48</height>
+                <font>font14</font>
+                <textoffsetx>0</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>$NUMBER[1080]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <haspath>false</haspath>
+                <visible>true</visible>			
+            </control>
+            
+            <control type="label" id="1039">
+                <left>0</left>
+                <height>48</height>
+                <font>font14</font>
+                <textoffsetx>0</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <label>Logfile</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <haspath>false</haspath>
+                <visible>true</visible>			
+            </control>
+                
+             <!-- button line grouplist -->
+             <control type="grouplist" id="1090">
+                 <top>70r</top>
+                 <height>50</height>
+                 <itemgap>20</itemgap>
+                 <orientation>horizontal</orientation>
+                 <align>left</align>
+                 <defaultcontrol>1093</defaultcontrol>
+                 <onleft>1093</onleft>
+                 <onright>1091</onright>
+                 <onup>1080</onup>
+                 <ondown>1010</ondown>
+            
+                <!-- stop button -->
+                <control type="button" id="1091">
+                    <description>Stop Button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <font>font14</font>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <disabledcolor>66B2D4F5</disabledcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <invalidcolor>invalid</invalidcolor>
+                    <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                    <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                    <enable>String.IsEqual(Window.Property(waitingForButton), true)</enable>
+                    <label>Stop</label>
+                    <onleft>1093</onleft>
+                    <onright>1092</onright>
+                </control>
+                <!-- replace button -->
+                <control type="button" id="1092">
+                    <description>Skip Button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <font>font14</font>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <disabledcolor>66B2D4F5</disabledcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <invalidcolor>invalid</invalidcolor>
+                    <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                    <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                    <enable>String.IsEqual(Window.Property(waitingForButton), true)</enable>
+                    <label>Skip</label>
+                    <onleft>1091</onleft>
+                    <onright>1093</onright>
+                </control>
+                <!-- continue button -->
+                <control type="button" id="1093">
+                    <description>Continue Button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <font>font14</font>
+                    <textcolor>FFB2D4F5</textcolor>
+                    <disabledcolor>66B2D4F5</disabledcolor>
+                    <shadowcolor>FF000000</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <invalidcolor>invalid</invalidcolor>
+                    <texturefocus colordiffuse="FF12A0C7">Button/button-fo.png</texturefocus>
+                    <texturenofocus colordiffuse="FF101314">Button/button-fo.png</texturenofocus>
+                    <enable>String.IsEqual(Window.Property(waitingForButton), true)</enable>
+                    <label>Continue</label>
+                    <onleft>1092</onleft>
+                    <onright>1091</onright>
+                </control>
+             </control>
+        </control>
+    </controls>
+</window>
